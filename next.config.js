@@ -1,4 +1,7 @@
 const isProd = process.env.NODE_ENV === "production";
+const path = require("path");
+
+const r = p => path.resolve(__dirname, p);
 
 let config = {
   lessLoaderOptions: {
@@ -18,6 +21,7 @@ let config = {
     // Perform customizations to webpack config
     // Important: return the modified config
     config.plugins.push(new webpack.IgnorePlugin(/\/__tests__\//));
+    config.resolve.alias["@"] = r("src");
     return config;
   },
   webpackDevMiddleware: config => {
@@ -28,6 +32,6 @@ let config = {
   exportTrailingSlash: false
 };
 
-config = withLess(config);
+config = require("@zeit/next-less")(config);
 
 module.exports = config;
