@@ -1,6 +1,10 @@
 const isProd = process.env.NODE_ENV === "production";
 
-module.exports = {
+let config = {
+  lessLoaderOptions: {
+    javascriptEnabled: true,
+    modifyVars: {} // make your antd custom effective
+  },
   env: {
     customKey: "my-value"
   },
@@ -23,3 +27,7 @@ module.exports = {
   },
   exportTrailingSlash: false
 };
+
+config = withLess(config);
+
+module.exports = config;
