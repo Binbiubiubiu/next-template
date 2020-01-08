@@ -17,6 +17,7 @@
 
 ### Miscellaneous
 
+-  chore(release):0.0.1 [[ec61740](https://github.com/Simon-Bin/next-template/commit/ec6174018f7a7e75fa821665db080e0311225659)]
 -  Merge branch &#x27;master&#x27; of https://github.com/Simon-Bin/next-template [[fa567b5](https://github.com/Simon-Bin/next-template/commit/fa567b5ffa37b3d629afeba017c42a420dc9847e)]
 -  Create README.md [[0809267](https://github.com/Simon-Bin/next-template/commit/080926729eb52d5cc925ff7e46aa7f3615aa9f67)]
 

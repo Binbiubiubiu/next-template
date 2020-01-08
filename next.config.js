@@ -4,10 +4,6 @@ const path = require("path");
 const r = p => path.resolve(__dirname, p);
 
 let config = {
-  lessLoaderOptions: {
-    javascriptEnabled: true,
-    modifyVars: {} // make your antd custom effective
-  },
   env: {
     customKey: "my-value"
   },
@@ -32,6 +28,6 @@ let config = {
   exportTrailingSlash: false
 };
 
-config = require("@zeit/next-less")(config);
+config = require("@zeit/next-css")(config);
 
 module.exports = config;
