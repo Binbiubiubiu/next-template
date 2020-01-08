@@ -1,25 +1,46 @@
-const { createServer } = require("http");
-const { parse } = require("url");
+const express = require("express");
 const next = require("next");
 
-const dev = process.env.NODE_ENV !== "production";
+const envVars = require("../scripts/env");
+
+const port = parseInt(process.env.PORT, 10) || 3000;
+const env = process.env.NODE_ENV;
+const apiPrefix = envVars.BASE_API;
+const dev = env !== "production";
+
+const devProxy = {
+  [apiPrefix]: {
+    target: "https://swapi.co/api/",
+    pathRewrite: { [`^${apiPrefix}`]: "/" },
+    changeOrigin: true
+  }
+};
+
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-app.prepare().then(() => {
-  createServer((req, res) => {
-    const parsedUrl = parse(req.url, true);
-    const { pathname, query } = parsedUrl;
+app
+  .prepare()
+  .then(() => {
+    const server = express();
 
-    if (pathname === "/a") {
-      app.render(req, res, "/b", query);
-    } else if (pathname === "/b") {
-      app.render(req, res, "/a", query);
-    } else {
-      handle(req, res, parsedUrl);
+    if (dev && devProxy) {
+      const proxyMiddleware = require("http-proxy-middleware");
+      Object.keys(devProxy).forEach(function(context) {
+        server.use(proxyMiddleware(context, devProxy[context]));
+      });
     }
-  }).listen(3000, err => {
-    if (err) throw err;
-    console.log("> Ready on http://localhost:3000");
+
+    server.all("*", (req, res) => {
+      return handle(req, res);
+    });
+
+    server.listen(port, err => {
+      if (err) throw err;
+      console.log(`> Ready on port http://localhost:${port} [${env}]`);
+    });
+  })
+  .catch(err => {
+    console.error(err.stack);
+    process.exit(1);
   });
-});

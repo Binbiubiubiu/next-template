@@ -1,11 +1,18 @@
-const isProd = process.env.NODE_ENV === "production";
+const envVars = require("./scripts/env");
+
 const path = require("path");
+const isProd = process.env.NODE_ENV === "production";
 
 const r = p => path.resolve(__dirname, p);
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true"
+});
 
 let config = {
   env: {
-    customKey: "my-value"
+    ...envVars,
+    TEST: process.env.TEST,
+    BACKEND_URL: isProd ? "https://api.example.com" : "https://localhost:8080"
   },
   pageExtensions: ["jsx", "js", "ts", "tsx"],
   // assetPrefix: isProd ? "https://cdn.mydomain.com" : "",
@@ -30,4 +37,4 @@ let config = {
 
 config = require("@zeit/next-css")(config);
 
-module.exports = config;
+module.exports = withBundleAnalyzer(config);

@@ -1,9 +1,11 @@
 import React from "react";
 import Layout from "@/layout";
+import Cat from "@/svgs/cat.svg";
 
 export default function Index() {
   return (
     <Layout>
+      <Cat />
       <div className="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl">
         <div className="flex-shrink-0">
           <img className="h-12 w-12" src="/img/logo.svg" alt="ChitChat Logo" />
