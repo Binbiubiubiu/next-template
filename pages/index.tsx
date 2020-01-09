@@ -1,26 +1,76 @@
-import React from "react";
+import React, { FC } from "react";
+import { bindActionCreators, AnyAction, Dispatch } from "redux";
 import Layout from "@/layout";
 import styled from "@emotion/styled";
 import tw from "tailwind.macro";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  CounterReducerAction,
+  CounterActionType,
+  CounterStateType
+} from "@/store/counter/reducer";
+import Link from "next/link";
+import { NextPage } from "next";
 
 const Wrapper = styled.div`
-  ${tw`max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl`}
+  ${tw`bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4`}
 `;
 
-export default function Index() {
+const Input = styled.input`
+  ${tw`flex-1 bg-gray-200 hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:shadow-outline focus:border-gray-300 appearance-none border border-transparent rounded w-full py-2 px-4 text-gray-700 leading-tight `}
+`;
+
+const Button = styled.button`
+  ${tw`ml-4 flex-shrink-0 bg-teal-500 hover:bg-teal-600 focus:outline-none focus:shadow-outline text-white font-bold py-2 px-4 rounded`}
+`;
+
+interface IndexPageProps {}
+
+const IndexPage: NextPage<IndexPageProps> = props => {
+  const count = useSelector<{ counter: CounterStateType }, number>(
+    state => state.counter.num
+  );
+  const dispatch = useDispatch<Dispatch<CounterActionType>>();
+
   return (
     <Layout>
       <Wrapper>
-        <div className=" flex-shrink-0">
-          <img className=" h-12 w-12" src="/img/logo.svg" alt="ChitChat Logo" />
-          <div className="ml-6 pt-1">
-            <h4 className="text-xl text-gray-900 leading-tight">ChitChart</h4>
-            <p className="text-base text-gray-600 leading-normal">
-              You have a new message!
-            </p>
-          </div>
-        </div>
+        <Input value={count} onChange={() => {}} />
+        <Button
+          onClick={() => {
+            dispatch({ type: CounterReducerAction.INCREMENT_ACTION });
+          }}
+        >
+          +
+        </Button>
+        <Button
+          onClick={() => {
+            dispatch({ type: CounterReducerAction.DESCREMENT_ACTION });
+          }}
+        >
+          -
+        </Button>
+        <Button
+          onClick={() => {
+            dispatch({ type: "USER_FETCH_REQUESTED" });
+            dispatch({
+              type: CounterReducerAction.RESET_ACTION,
+              payload: { num: 0 }
+            });
+          }}
+        >
+          reset
+        </Button>
+        <Link href="/about">
+          <Button>前往about</Button>
+        </Link>
       </Wrapper>
     </Layout>
   );
-}
+};
+
+IndexPage.getInitialProps = async () => {
+  return {};
+};
+
+export default IndexPage;

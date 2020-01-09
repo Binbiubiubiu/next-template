@@ -1,8 +1,9 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { NextPage } from "next";
 
-export default function About() {
+const AboutPage: NextPage = props => {
   const router = useRouter();
   return (
     <div>
@@ -17,4 +18,10 @@ export default function About() {
       about page
     </div>
   );
-}
+};
+
+AboutPage.getInitialProps = async context => {
+  return {};
+};
+
+export default AboutPage;
