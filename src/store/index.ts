@@ -1,47 +1,13 @@
-import { createStore, applyMiddleware, Store, AnyAction } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
+import reducers from "./modules";
 
-export interface StoreType {
-  lastUpdate: number;
-  light: boolean;
-  count: number;
-}
+const composeEnhancers =
+  (typeof window !== "undefined" &&
+    (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
+  compose;
+const store = createStore(
+  reducers,
+  /* preloadedState, */ composeEnhancers(applyMiddleware(...[]))
+);
 
-const initialState: StoreType = {
-  lastUpdate: 0,
-  light: false,
-  count: 0
-};
-
-const reducer = (state = initialState, action: AnyAction) => {
-  switch (action.type) {
-    case "TICK":
-      return {
-        ...state,
-        lastUpdate: action.lastUpdate,
-        light: !!action.light
-      };
-    case "INCREMENT":
-      return {
-        ...state,
-        count: state.count + 1
-      };
-    case "DECREMENT":
-      return {
-        ...state,
-        count: state.count - 1
-      };
-    case "RESET":
-      return {
-        ...state,
-        count: initialState.count
-      };
-    default:
-      return state;
-  }
-};
-
-export const initializeStore = (
-  preloadedState: StoreType = initialState
-): Store<StoreType> => {
-  return createStore(reducer, preloadedState, applyMiddleware());
-};
+export default store;

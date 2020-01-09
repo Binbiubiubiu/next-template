@@ -1,0 +1,11 @@
+{
+  "restartable": "rs",
+  "verbose": true,
+  "ignore": ["tests", "node_modules"],
+  "exec": "node server/index.js",
+  "watch": ["src/", "pages/"],
+  "ext": "js,jsx,ts,tsx",
+  "env": {
+    "NODE_ENV": "development"
+  }
+}

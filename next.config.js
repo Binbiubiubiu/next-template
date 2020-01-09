@@ -25,6 +25,10 @@ let config = {
     // Important: return the modified config
     config.plugins.push(new webpack.IgnorePlugin(/\/__tests__\//));
     config.resolve.alias["@"] = r("src");
+
+    config.node = {
+      fs: "empty"
+    };
     return config;
   },
   webpackDevMiddleware: config => {

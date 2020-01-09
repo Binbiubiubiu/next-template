@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server",
+    "dev": "nodemon",
     "build": "next build",
     "start": "cross-env NODE_ENV=production PORT=3000 node server",
     "start:custom": "node server",
@@ -11,22 +11,26 @@
     "lint:css": "stylelint '**/*.css'",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "analyze": "cross-env ANALYZE=true yarn build",
-    "test:env": "cross-env NODE_ENV=production node next.config.js"
+    "analyze": "cross-env ANALYZE=true yarn build"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
     "axios": "^0.19.1",
+    "classnames": "^2.2.6",
     "express": "^4.17.1",
     "next": "^9.1.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
     "redux": "^4.0.5",
-    "tailwindcss": "^1.1.4"
+    "redux-saga": "^1.1.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.7",
     "@fullhuman/postcss-purgecss": "^1.3.0",
     "@next/bundle-analyzer": "^9.1.7",
+    "@types/classnames": "^2.2.9",
     "@types/enzyme": "^3.10.4",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.25",
@@ -35,9 +39,10 @@
     "@types/react-redux": "^7.1.5",
     "@types/react-test-renderer": "^16.9.1",
     "@zeit/next-css": "^1.0.1",
-    "babel-core": "^6.26.3",
     "babel-jest": "^24.9.0",
+    "babel-plugin-emotion": "^10.0.27",
     "babel-plugin-inline-react-svg": "^1.1.0",
+    "babel-plugin-macros": "^2.8.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "cross-env": "^6.0.3",
     "dotenv": "^8.2.0",
@@ -54,6 +59,8 @@
     "stylelint": "^12.0.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-order": "^4.0.0",
+    "tailwind.macro": "1.0.0-alpha.10",
+    "tailwindcss": "^1.1.4",
     "typescript": "^3.7.4"
   },
   "browserslist": [
