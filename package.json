@@ -1,6 +1,6 @@
 {
   "name": "next-template",
-  "version": "0.0.1",
+  "version": "0.0.2-0",
   "author": "lvbin",
   "description": "a next-template",
   "keywords": [
@@ -51,7 +51,6 @@
     ]
   },
   "dependencies": {
-
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
     "axios": "^0.19.1",
