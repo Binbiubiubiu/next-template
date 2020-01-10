@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.2-0](https://github.com/Simon-Bin/next-template/compare/v0.0.1...v0.0.2-0) (2020-01-10)
 
+### [0.0.2-0](https://github.com/Simon-Bin/next-template/compare/v0.0.1...v0.0.2-0) (2020-01-10)
+
 <a name="0.0.1"></a>
 ## 0.0.1 (2020-01-10)
 
