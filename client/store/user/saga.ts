@@ -1,6 +1,6 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
 import { login } from '@/api/user';
-import { UserReducerAction, UserActionType } from './reducer';
+import { UserReducerAction } from './reducer';
 
 function* fetchUser() {
   try {

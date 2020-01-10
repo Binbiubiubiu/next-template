@@ -11,13 +11,13 @@ module.exports = {
         },
       },
     ],
-    ["inline-react-svg"],
+    ['inline-react-svg'],
     [
       'module-resolver',
       {
         root: ['./'],
         alias: {
-          '@': './src',
+          '@': './client',
         },
       },
     ],

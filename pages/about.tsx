@@ -19,7 +19,7 @@ const AboutPage: NextPage = () => {
   );
 };
 
-AboutPage.getInitialProps = async (context) => {
+AboutPage.getInitialProps = async () => {
   return {};
 };
 

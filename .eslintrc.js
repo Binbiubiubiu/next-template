@@ -7,6 +7,11 @@ module.exports = {
     'prettier/@typescript-eslint', // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
     'prettier/react',
   ],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   parserOptions: {
     sourceType: 'module',
     ecmaFeatures: {
@@ -21,7 +26,7 @@ module.exports = {
   },
   globals: {},
   rules: {
-    "@typescript-eslint/explicit-function-return-type":0,
-    "react/prop-types":0
+    '@typescript-eslint/explicit-function-return-type': 0,
+    'react/prop-types': 0,
   },
 };

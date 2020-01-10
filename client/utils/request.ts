@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const customHeaderToken = 'token';
+// const customHeaderToken = 'token';
 
 const service = axios.create({
   baseURL: process.env.BASE_API, // url = base url + request url

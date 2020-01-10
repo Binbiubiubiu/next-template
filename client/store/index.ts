@@ -7,6 +7,7 @@ import reducers from './reducers';
 import rootSaga from './sagas';
 
 const composeEnhancers =
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (typeof window !== 'undefined' && (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
   compose;
 
