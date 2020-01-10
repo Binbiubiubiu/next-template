@@ -1,6 +1,21 @@
 {
   "name": "next-template",
   "version": "0.0.1",
+  "author": "lvbin",
+  "description": "a next-template",
+  "keywords": [
+    "next",
+    "template"
+  ],
+  "homepage": "https://github.com/Simon-Bin/next-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simon-Bin/next-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Simon-Bin/next-template/issues"
+  },
+  "license": "ISC",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,11 +28,14 @@
     "lint": "prettier --write \"**/*.{ts,tsx}\" && npm run lint:script -- --fix && npm run lint:style -- --fix",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "analyze": "cross-env ANALYZE=true yarn build"
+    "analyze": "cross-env ANALYZE=true yarn build",
+    "cz": "git cz",
+    "release": "standard-version"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
@@ -33,6 +51,7 @@
     ]
   },
   "dependencies": {
+
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
     "axios": "^0.19.1",
@@ -48,6 +67,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
     "@fullhuman/postcss-purgecss": "^1.3.0",
     "@next/bundle-analyzer": "^9.1.7",
     "@types/classnames": "^2.2.9",
@@ -67,8 +88,10 @@
     "babel-plugin-inline-react-svg": "^1.1.0",
     "babel-plugin-macros": "^2.8.0",
     "babel-plugin-module-resolver": "^4.0.0",
+    "commitizen": "^4.0.3",
     "cross-env": "^6.0.3",
     "cssnano": "^4.1.10",
+    "cz-conventional-changelog": "^3.0.2",
     "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
@@ -88,6 +111,7 @@
     "prettier": "^1.19.1",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^16.12.0",
+    "standard-version": "^7.0.1",
     "stylelint": "^12.0.1",
     "stylelint-config-prettier": "^8.0.0",
     "stylelint-config-rational-order": "^0.1.2",
@@ -103,5 +127,10 @@
     "Firefox ESR",
     "> 1%",
     "ie >= 11"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
