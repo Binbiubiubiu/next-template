@@ -1,25 +1,25 @@
 module.exports = {
-  presets: ["next/babel"],
+  presets: ['next/babel'],
   plugins: [
-    ["emotion"],
+    ['emotion'],
     [
-      "macros",
+      'macros',
       {
         tailwind: {
-          config: "./tailwind.config.js",
-          format: "auto"
-        }
-      }
+          config: './tailwind.config.js',
+          format: 'auto',
+        },
+      },
     ],
     ["inline-react-svg"],
     [
-      "module-resolver",
+      'module-resolver',
       {
-        root: ["./"],
+        root: ['./'],
         alias: {
-          "@": "./src"
-        }
-      }
-    ]
-  ]
+          '@': './src',
+        },
+      },
+    ],
+  ],
 };

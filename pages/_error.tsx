@@ -1,13 +1,11 @@
-import React from "react";
-import { NextPageContext } from "next";
-import { ErrorProps } from "next/error";
+import React from 'react';
+import { NextPageContext } from 'next';
+import { ErrorProps } from 'next/error';
 
 function Error({ statusCode }: ErrorProps) {
   return (
     <p>
-      {statusCode
-        ? `An error ${statusCode} occurred on server`
-        : "An error occurred on client"}
+      {statusCode ? `An error ${statusCode} occurred on server` : 'An error occurred on client'}
     </p>
   );
 }
