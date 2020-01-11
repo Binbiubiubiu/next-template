@@ -1,4 +1,4 @@
-import configureStore from 'redux-mock-store';
+import configureStore, { MockStoreEnhanced } from 'redux-mock-store';
 import { incrementAction, descrementAction, resetAction } from '../actions';
 import { INCREMENT, DESCREMENT, CounterState, RESET } from '../types';
 import { Middleware } from 'redux';
@@ -8,8 +8,10 @@ const middlewares: Middleware[] = [];
 const mockStore = configureStore<CounterState>(middlewares);
 
 describe('reducers', () => {
-  const store = mockStore({ num: 0 });
-  store.replaceReducer(CounterReducer);
+  let store: MockStoreEnhanced<CounterState>;
+  beforeAll(() => {
+    store = mockStore({ num: 0 });
+  });
 
   beforeEach(() => {
     store.clearActions();

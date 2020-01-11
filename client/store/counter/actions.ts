@@ -8,7 +8,9 @@ import {
   RESET_ASYNC,
 } from './types';
 
-/****************************** reducerAction ******************************/
+/* -------------------------------------------------------------------------- */
+/*                                reducerAction                               */
+/* -------------------------------------------------------------------------- */
 
 export function incrementAction(): CounterActionTypes {
   return {
@@ -31,7 +33,9 @@ export function resetAction(num: number): CounterActionTypes {
   };
 }
 
-/****************************** sagaAction ******************************/
+/* -------------------------------------------------------------------------- */
+/*                                 sagaAction                                 */
+/* -------------------------------------------------------------------------- */
 
 export function incrementAsyncAction(): CounterActionTypes {
   return {
