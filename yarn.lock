@@ -1589,6 +1589,13 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/redux-mock-store@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/@types/redux-mock-store/download/@types/redux-mock-store-1.0.1.tgz#90ca701d640aef7c007f564a9a4f8dc03180b0f7"
+  integrity sha1-kMpwHWQK73wAf1ZKmk+NwDGAsPc=
+  dependencies:
+    redux "^4.0.0"
+
 "@types/semver@^6.0.1":
   version "6.2.0"
   resolved "https://registry.npm.taobao.org/@types/semver/download/@types/semver-6.2.0.tgz#d688d574400d96c5b0114968705366f431831e1a"
@@ -2115,6 +2122,16 @@ array-includes@^3.0.3:
     define-properties "^1.1.3"
     es-abstract "^1.17.0"
     is-string "^1.0.5"
+
+array-map@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.npm.taobao.org/array-map/download/array-map-0.0.0.tgz#88a2bab73d1cf7bcd5c1b118a003f66f665fa662"
+  integrity sha1-iKK6tz0c97zVwbEYoAP2b2ZfpmI=
+
+array-reduce@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.npm.taobao.org/array-reduce/download/array-reduce-0.0.0.tgz#173899d3ffd1c7d9383e4479525dbe278cab5f2b"
+  integrity sha1-FziZ0//Rx9k4PkR5Ul2+J4yrXys=
 
 array-union@^1.0.1, array-union@^1.0.2:
   version "1.0.2"
@@ -3661,7 +3678,7 @@ core-js-compat@^3.1.1:
     browserslist "^4.8.3"
     semver "7.0.0"
 
-core-js@^2.4.0, core-js@^2.5.0, core-js@^2.6.5:
+core-js@^2.4.0, core-js@^2.4.1, core-js@^2.5.0, core-js@^2.6.5:
   version "2.6.11"
   resolved "https://registry.npm.taobao.org/core-js/download/core-js-2.6.11.tgz#38831469f9922bded8ee21c9dc46985e0399308c"
   integrity sha1-OIMUafmSK97Y7iHJ3EaYXgOZMIw=
@@ -5374,6 +5391,11 @@ for-in@^1.0.2:
   resolved "https://registry.npm.taobao.org/for-in/download/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
   integrity sha1-gQaNKVqBQuwKxybG4iAMMPttXoA=
 
+foreach@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.npm.taobao.org/foreach/download/foreach-2.0.4.tgz#cc5d0d8ae1d46cc9a555c2682f910977859935df"
+  integrity sha1-zF0NiuHUbMmlVcJoL5EJd4WZNd8=
+
 forever-agent@~0.6.1:
   version "0.6.1"
   resolved "https://registry.npm.taobao.org/forever-agent/download/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
@@ -5470,6 +5492,11 @@ fsevents@~2.1.2:
   version "2.1.2"
   resolved "https://registry.npm.taobao.org/fsevents/download/fsevents-2.1.2.tgz#4c0a1fb34bc68e543b4b82a9ec392bfbda840805"
   integrity sha1-TAofs0vGjlQ7S4Kp7Dkr+9qECAU=
+
+fsm-iterator@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npm.taobao.org/fsm-iterator/download/fsm-iterator-1.1.0.tgz#337de45de19eb205788cf02e3a955ec206760dec"
+  integrity sha1-M33kXeGesgV4jPAuOpVewgZ2Dew=
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -6266,6 +6293,11 @@ indexes-of@^1.0.1:
   resolved "https://registry.npm.taobao.org/indexes-of/download/indexes-of-1.0.1.tgz#f30f716c8e2bd346c7b67d3df3915566a7c05607"
   integrity sha1-8w9xbI4r00bHtn0985FVZqfAVgc=
 
+indexof@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npm.taobao.org/indexof/download/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
+  integrity sha1-gtwzbSMrkGIXnQWrMpOmYFn9Q10=
+
 infer-owner@^1.0.3:
   version "1.0.4"
   resolved "https://registry.npm.taobao.org/infer-owner/download/infer-owner-1.0.4.tgz#c4cefcaa8e51051c2a40ba2ce8a3d27295af9467"
@@ -6796,6 +6828,11 @@ is-wsl@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npm.taobao.org/is-wsl/download/is-wsl-1.1.0.tgz#1f16e4aa22b04d1336b66188a66af3c600c3a66d"
   integrity sha1-HxbkqiKwTRM2tmGIpmrzxgDDpm0=
+
+isarray@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npm.taobao.org/isarray/download/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
+  integrity sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=
 
 isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
   version "1.0.0"
@@ -7350,6 +7387,11 @@ json-stringify-safe@^5.0.1, json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.npm.taobao.org/json-stringify-safe/download/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
+
+json3@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.npm.taobao.org/json3/download/json3-3.3.0.tgz#0e9e7f6c5d270b758929af4d6fefdc84bd66e259"
+  integrity sha1-Dp5/bF0nC3WJKa9Nb+/chL1m4lk=
 
 json5@2.1.1, json5@^2.1.0:
   version "2.1.1"
@@ -8254,6 +8296,11 @@ neo-async@^2.5.0, neo-async@^2.6.0, neo-async@^2.6.1:
   resolved "https://registry.npm.taobao.org/neo-async/download/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha1-rCetpmFn+ohJpq3dg39rGJrSCBw=
 
+next-redux-wrapper@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.npm.taobao.org/next-redux-wrapper/download/next-redux-wrapper-4.0.1.tgz#70f2d83b5bd0fb07ec19e6e70bea6b179d295fd7"
+  integrity sha1-cPLYO1vQ+wfsGebnC+prF50pX9c=
+
 next@^9.1.7:
   version "9.1.7"
   resolved "https://registry.npm.taobao.org/next/download/next-9.1.7.tgz#d813ab3a21a98aac3713f6c1934a8533b6162eb0"
@@ -8570,6 +8617,11 @@ object-is@^1.0.1, object-is@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/object-is/download/object-is-1.0.2.tgz?cache=0&sync_timestamp=1576479714417&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fobject-is%2Fdownload%2Fobject-is-1.0.2.tgz#6b80eb84fe451498f65007982f035a5b445edec4"
   integrity sha1-a4DrhP5FFJj2UAeYLwNaW0Re3sQ=
+
+object-keys@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.npm.taobao.org/object-keys/download/object-keys-0.5.0.tgz#09e211f3e00318afc4f592e36e7cdc10d9ad7293"
+  integrity sha1-CeIR8+ADGK/E9ZLjbnzcENmtcpM=
 
 object-keys@^1.0.11, object-keys@^1.0.12, object-keys@^1.1.1:
   version "1.1.1"
@@ -10446,10 +10498,34 @@ reduce-css-calc@^2.1.6:
     css-unit-converter "^1.1.1"
     postcss-value-parser "^3.3.0"
 
+redux-devtools-extension@^2.13.8:
+  version "2.13.8"
+  resolved "https://registry.npm.taobao.org/redux-devtools-extension/download/redux-devtools-extension-2.13.8.tgz#37b982688626e5e4993ff87220c9bbb7cd2d96e1"
+  integrity sha1-N7mCaIYm5eSZP/hyIMm7t80tluE=
+
+redux-mock-store@^1.5.4:
+  version "1.5.4"
+  resolved "https://registry.npm.taobao.org/redux-mock-store/download/redux-mock-store-1.5.4.tgz#90d02495fd918ddbaa96b83aef626287c9ab5872"
+  integrity sha1-kNAklf2Rjduqlrg672Jih8mrWHI=
+  dependencies:
+    lodash.isplainobject "^4.0.6"
+
 redux-persist@^6.0.0:
   version "6.0.0"
   resolved "https://registry.npm.taobao.org/redux-persist/download/redux-persist-6.0.0.tgz#b4d2972f9859597c130d40d4b146fecdab51b3a8"
   integrity sha1-tNKXL5hZWXwTDUDUsUb+zatRs6g=
+
+redux-saga-test-plan@^4.0.0-rc.2:
+  version "4.0.0-rc.2"
+  resolved "https://registry.npm.taobao.org/redux-saga-test-plan/download/redux-saga-test-plan-4.0.0-rc.2.tgz#7cea08661bb0254db883b8fb5a05143763136853"
+  integrity sha1-fOoIZhuwJU24g7j7WgUUN2MTaFM=
+  dependencies:
+    core-js "^2.4.1"
+    fsm-iterator "^1.1.0"
+    lodash.isequal "^4.5.0"
+    lodash.ismatch "^4.4.0"
+    object-assign "^4.1.0"
+    util-inspect "^0.1.8"
 
 redux-saga@^1.1.3:
   version "1.1.3"
@@ -10460,7 +10536,7 @@ redux-saga@^1.1.3:
 
 redux@^4.0.0, redux@^4.0.4, redux@^4.0.5:
   version "4.0.5"
-  resolved "https://registry.npm.taobao.org/redux/download/redux-4.0.5.tgz?cache=0&sync_timestamp=1577154206919&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fredux%2Fdownload%2Fredux-4.0.5.tgz#4db5de5816e17891de8a80c424232d06f051d93f"
+  resolved "https://registry.npm.taobao.org/redux/download/redux-4.0.5.tgz#4db5de5816e17891de8a80c424232d06f051d93f"
   integrity sha1-TbXeWBbheJHeioDEJCMtBvBR2T8=
   dependencies:
     loose-envify "^1.4.0"
@@ -12519,6 +12595,19 @@ util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/util-deprecate/download/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
+
+util-inspect@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.npm.taobao.org/util-inspect/download/util-inspect-0.1.8.tgz#2b39dbcd2d921f2d8430923caff40f4b5cea5db1"
+  integrity sha1-KznbzS2SHy2EMJI8r/QPS1zqXbE=
+  dependencies:
+    array-map "0.0.0"
+    array-reduce "0.0.0"
+    foreach "2.0.4"
+    indexof "0.0.1"
+    isarray "0.0.1"
+    json3 "3.3.0"
+    object-keys "0.5.0"
 
 util.promisify@^1.0.0, util.promisify@~1.0.0:
   version "1.0.0"
