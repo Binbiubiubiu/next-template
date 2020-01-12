@@ -37,4 +37,4 @@ export function* watchResetAsync() {
 /*                                    root                                    */
 /* -------------------------------------------------------------------------- */
 
-export const counterSagas = [watchAddAsync, watchSubAsync, watchResetAsync].map(fork);
+export const counterSagas = [watchAddAsync(), watchSubAsync(), watchResetAsync()];
