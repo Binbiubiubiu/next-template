@@ -3,7 +3,7 @@ const envVars = require('./env');
 const path = require('path');
 const isProd = process.env.NODE_ENV === 'production';
 
-const r = (p) => path.resolve(__dirname, p);
+const r = (...args) => path.resolve(__dirname, ...args);
 
 module.exports = {
   env: {
@@ -12,10 +12,16 @@ module.exports = {
     BACKEND_URL: isProd ? 'https://api.example.com' : 'https://localhost:8080',
   },
   pageExtensions: ['jsx', 'js', 'ts', 'tsx'],
-  cssModules: true,
-  cssLoaderOptions: {
-    importLoaders: 1,
-    localIdentName: '[local]___[hash:base64:5]',
+  // cssModules: true,
+  // cssLoaderOptions: {
+  //   importLoaders: 1,
+  //   localIdentName: '[local]___[hash:base64:5]',
+  // },
+  lessLoaderOptions: {
+    javascriptEnabled: true,
+  },
+  styleResourcesLoaderOptions: {
+    patterns: [r('client/styles/index.less')],
   },
   // assetPrefix: isProd ? "https://cdn.mydomain.com" : "",
   target: 'serverless', // serverless（推荐）, server
@@ -26,8 +32,18 @@ module.exports = {
     // Perform customizations to webpack config
     // Important: return the modified config
     config.plugins.push(new webpack.IgnorePlugin(/\/__tests__\//));
-    config.resolve.alias['@'] = r('client');
+    config.resolve.alias['@'] = r('..', 'client');
 
+    config.module.rules.map((rule) => {
+      if (rule.test && rule.test.source.includes('less')) {
+        rule.use.push({
+          loader: 'style-resources-loader',
+          options: {
+            patterns: [r('..', 'client/styles/index.less')],
+          },
+        });
+      }
+    });
     config.node = {
       fs: 'empty',
     };

@@ -5,7 +5,7 @@ import App, { AppContext } from 'next/app';
 import { persistStore, Persistor } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 
-import '@/styles/global.css';
+import '@/global.css';
 import configureStore from '@/store';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

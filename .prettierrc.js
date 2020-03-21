@@ -4,5 +4,4 @@ module.exports = {
   trailingComma: 'all',
   jsxBracketSameLine: true,
   arrowParens: 'always',
-  parser: 'typescript',
 };
