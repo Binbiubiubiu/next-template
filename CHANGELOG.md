@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/Simon-Bin/next-template/compare/v0.0.2-2...v0.0.2) (2020-03-21)
+
+
+### Bug Fixes
+
+* fix saga all ([8b16812](https://github.com/Simon-Bin/next-template/commit/8b1681200661630c3cdd6470c26974efd8ae989b))
+
 ### [0.0.2-2](https://github.com/Simon-Bin/next-template/compare/v0.0.2-1...v0.0.2-2) (2020-01-11)
 
 
