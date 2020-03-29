@@ -1,4 +1,10 @@
-@import 'normalize.css/normalize.css';
+/* purgecss start ignore */
+@import 'tailwindcss/base.css';
+
+@import 'tailwindcss/components.css';
+
+/* purgecss end ignore */
+@import 'tailwindcss/utilities.css';
 
 html {
   min-width: 1000px;
